@@ -21,18 +21,11 @@ def convert_from_base_10(x: int, b: int) -> str:
     return y
 
 
-def convert_to_base_10(x: int, b: int) -> int:
-    y = 0
-    str_x = str(x)
+def convert_to_base_10(x: str, b: int, i=0, y=0) -> int:
+    while i != len(x):
+        y += int(x[-(i + 1)]) * b ** i
+        i += 1
 
-    print(f"y_10 = {x}_{b}")
-
-    msg = "y_10 = "
-    for i in range(0, len(str_x)):
-        msg += f" {str_x[-1 - i]}*{b}**{i} + "
-        y += int(str_x[-1 - i]) * b ** i
-
-    print(msg)
     return y
 
 
