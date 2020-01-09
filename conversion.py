@@ -21,12 +21,19 @@ def convert_from_base_10(x: int, b: int) -> str:
     return y
 
 
-def convert_to_base_10(x: str, b: int, i=0, y=0) -> int:
-    while i != len(x):
-        y += int(x[-(i + 1)]) * b ** i
-        i += 1
+def convert_to_base_10(x: str, b: int, i=0) -> int:
+    """
+    returns number converted from base b to base 10
+    """
 
-    return y
+    # allow function to be used with numbers
+    if not isinstance(x, str):
+        x = str(x)
+
+    # breaks when length of number is achieved
+    if i == len(x) - 1:
+        return int(x[-(i + 1)])
+    return int(x[-(i + 1)]) + b * (convert_to_base_10(x, b, i + 1))
 
 
 # example
