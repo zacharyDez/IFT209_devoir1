@@ -1,3 +1,6 @@
+import math
+
+
 def number(val: int) -> str:
     """
     returns number associated with numerical value
@@ -86,9 +89,4 @@ def convert_to_base_10_latex(x: str, b: int) -> str:
 
 # example
 if __name__ == "__main__":
-
-    x = 34152
-    b1 = 6
-
-    print(convert_to_base_10_latex(x, b1))
-
+    pass
