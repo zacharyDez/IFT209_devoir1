@@ -20,3 +20,9 @@ class TestConvertToBase10(TestCase):
     def test_y_result_x_is_str(self):
         y = convert_to_base_10(str(self.x), self.b)
         assert y == 54333
+
+    def test_y_result_x1(self):
+        b = 6
+        x = 34152
+        y = convert_to_base_10(x, b)
+        assert y == 4820
