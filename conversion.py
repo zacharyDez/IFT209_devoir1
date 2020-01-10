@@ -87,24 +87,8 @@ def convert_to_base_10_latex(x: str, b: int) -> str:
 # example
 if __name__ == "__main__":
 
-    # question 1
-
-    # a.
-    # x = 314256
-    # b = 7
-    # print(convert_to_base_10_latex(x, b)+'\n')
-
-    # b.
-    # b = 16
-    # x = 695581
-    # print(convert_from_base_10_latex(x, b))
-
-    # c.
     x = 34152
     b1 = 6
-    # b2 = 3
 
-    # b1 not a power of b2
     print(convert_to_base_10_latex(x, b1))
-    # print(convert_from_base_10_latex(convert_to_base_10(x, 6), b2))
 

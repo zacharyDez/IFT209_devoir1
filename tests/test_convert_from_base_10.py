@@ -15,3 +15,6 @@ class TestConvertFromBase10(TestCase):
 
     def test_y_result(self):
         assert int(self.y) == 2446125
+
+    def test_base_10_to_3(self):
+        assert convert_from_base_10(4820, 3) == "20121112"

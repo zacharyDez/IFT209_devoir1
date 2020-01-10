@@ -16,7 +16,5 @@ class TestConvertToBase10Latex(TestCase):
     def test_returns_str(self):
         assert isinstance(self.latex, str)
 
-
-
     def test_num_parenthesis_matches(self):
         assert len([l for l in self.latex if l == '(']) == len([l for l in self.latex if l == ')'])

@@ -16,7 +16,7 @@ class TestConvertToBase10Latex(TestCase):
     def test_number_of_times_sym_matches_number(self):
         num_times = len(self.latex.split('\\times'))
         # 3 times in initial message
-        assert num_times == len(str(self.x))+3
+        assert num_times == len(str(self.x)) + 3
 
     def test_num_parenthesis_matches(self):
         assert len([l for l in self.latex if l == '(']) == len([l for l in self.latex if l == ')'])
