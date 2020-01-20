@@ -1,5 +1,4 @@
-from conversion import convert_to_base_10
-import math
+from conversion import convert_to_base_10, number
 
 
 def convert_to_base_10_latex(x: str, b: int) -> str:
@@ -39,7 +38,7 @@ def convert_from_base_10_latex(x: int, b: int) -> str:
     msg += f"y = {x} \% {b}\qquad x = {x}\n\n"
 
     while True:
-        y = math.number(x % b) + y
+        y = number(x % b) + y
         x = x // b
         msg += f"y = {x} \% {b} + {y}\qquad "
         msg += f"x = {x}//{b}\n\n"
